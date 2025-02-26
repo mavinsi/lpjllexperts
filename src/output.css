@@ -793,16 +793,8 @@ video {
   margin-right: 0.5rem;
 }
 
-.mt-1{
-  margin-top: 0.25rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
 }
 
 .mt-4{
@@ -946,6 +938,10 @@ video {
   max-width: 56rem;
 }
 
+.max-w-5xl{
+  max-width: 64rem;
+}
+
 .max-w-\[85rem\]{
   max-width: 85rem;
 }
@@ -972,10 +968,6 @@ video {
 
 .max-w-xl{
   max-width: 36rem;
-}
-
-.max-w-5xl{
-  max-width: 64rem;
 }
 
 .flex-auto{
@@ -1008,10 +1000,6 @@ video {
 
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -1165,8 +1153,8 @@ video {
   background-color: rgb(0 0 0 / 0.3);
 }
 
-.bg-black\/50{
-  background-color: rgb(0 0 0 / 0.5);
+.bg-black\/80{
+  background-color: rgb(0 0 0 / 0.8);
 }
 
 .bg-blue-600{
@@ -1209,14 +1197,13 @@ video {
   background-color: rgb(23 23 23 / var(--tw-bg-opacity, 1));
 }
 
-.bg-neutral-950{
-  --tw-bg-opacity: 1;
-  background-color: rgb(10 10 10 / var(--tw-bg-opacity, 1));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-black\/90{
+  background-color: rgb(0 0 0 / 0.9);
 }
 
 .bg-gradient-to-b{
@@ -1233,9 +1220,9 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-neutral-950\/80{
-  --tw-gradient-from: rgb(10 10 10 / 0.8) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(10 10 10 / 0) var(--tw-gradient-to-position);
+.from-white{
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -1249,8 +1236,22 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-white\/95{
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.95) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-white\/90{
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(255 255 255 / 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .to-neutral-950{
   --tw-gradient-to: #0a0a0a var(--tw-gradient-to-position);
+}
+
+.to-white{
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
 }
 
 .bg-cover{
@@ -1450,14 +1451,19 @@ video {
   letter-spacing: 0.025em;
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
 .text-blue-500{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity, 1));
 }
 
-.text-gray-400{
+.text-blue-700{
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+  color: rgb(29 78 216 / var(--tw-text-opacity, 1));
 }
 
 .text-gray-50{
@@ -1505,6 +1511,10 @@ video {
 
 .text-white\/80{
   color: rgb(255 255 255 / 0.8);
+}
+
+.text-black\/80{
+  color: rgb(0 0 0 / 0.8);
 }
 
 .line-through{
@@ -1728,10 +1738,6 @@ video {
     margin-top: 0px;
   }
 
-  .sm\:mt-3{
-    margin-top: 0.75rem;
-  }
-
   .sm\:h-80{
     height: 20rem;
   }
@@ -1778,10 +1784,6 @@ video {
 
   .sm\:justify-center{
     justify-content: center;
-  }
-
-  .sm\:gap-12{
-    gap: 3rem;
   }
 
   .sm\:space-x-12 > :not([hidden]) ~ :not([hidden]){
@@ -1834,11 +1836,6 @@ video {
     line-height: 2.5rem;
   }
 
-  .sm\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .sm\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1846,11 +1843,6 @@ video {
 
   .sm\:text-lg{
     font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .sm\:text-xl{
-    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
@@ -1946,11 +1938,6 @@ video {
     max-width: 36rem;
   }
 
-  .lg\:translate-x-32{
-    --tw-translate-x: 8rem;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1973,10 +1960,6 @@ video {
 
   .lg\:gap-16{
     gap: 4rem;
-  }
-
-  .lg\:gap-8{
-    gap: 2rem;
   }
 
   .lg\:border-b-0{
